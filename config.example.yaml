@@ -1,0 +1,11 @@
+# redterm configuration
+# Copy to ~/.config/redterm/config.yaml and edit as needed.
+# All values can be overridden via environment variables.
+
+provider: ollama          # openai | anthropic | ollama
+model: llama3.2           # model name for the chosen provider
+api_key: ""               # or set REDTERM_API_KEY env var
+base_url: http://localhost:11434  # ollama default; override for OpenAI-compatible endpoints
+context_lines: 500        # rolling buffer size (lines of terminal output kept for context)
+shell: /bin/bash          # shell to spawn; e.g. /bin/zsh
+trigger_key: ctrl+g       # key chord that opens the redterm command bar
