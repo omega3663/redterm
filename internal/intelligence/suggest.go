@@ -34,7 +34,7 @@ func ParseSuggestCommands(result string) []string {
 	var cmds []string
 	for _, line := range strings.Split(result, "\n") {
 		upper := strings.ToUpper(strings.TrimSpace(line))
-		for _, prefix := range []string{"COMMAND1:", "COMMAND2:", "COMMAND3:"} {
+		for _, prefix := range []string{"COMMAND [1]:", "COMMAND [2]:", "COMMAND [3]:"} {
 			if strings.HasPrefix(upper, prefix) {
 				// Extract from the original line to preserve casing
 				idx := strings.Index(strings.ToUpper(line), prefix)
